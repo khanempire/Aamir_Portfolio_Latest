@@ -1,0 +1,222 @@
+.journey {
+  padding: var(--section-padding);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.journey-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.journey-scroll {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-bottom: 1rem;
+  margin: 0 -0.5rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.journey-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.journey-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.journey-scroll::-webkit-scrollbar-thumb {
+  background: rgba(var(--accent-rgb), 0.4);
+  border-radius: 3px;
+}
+
+.journey-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--accent-rgb), 0.6);
+}
+
+.journey-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 1rem;
+  min-width: min-content;
+}
+
+.journey-line {
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem;
+  right: 2rem;
+  min-width: calc(100% - 4rem);
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(var(--accent-rgb), 0.2),
+    rgba(var(--accent-rgb), 0.5),
+    rgba(var(--accent-rgb), 0.2)
+  );
+  border-radius: 3px;
+  z-index: 0;
+}
+
+.journey-step {
+  flex: 0 0 auto;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.journey-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.journey-node-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.journey-year {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  background: var(--bg);
+  border: 2px solid rgba(var(--accent-rgb), 0.4);
+  border-radius: 12px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.journey-node-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.25);
+  flex-shrink: 0;
+}
+
+.journey-card {
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+  padding: 1.25rem 1.25rem 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.journey-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.journey-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.4rem;
+}
+
+.journey-description {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.journey-number {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(var(--accent-rgb), 0.4);
+}
+
+/* Responsive: vertical layout on small screens */
+@media (max-width: 900px) {
+  .journey-timeline {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .journey-line {
+    top: 0;
+    bottom: 0;
+    left: 1.5rem;
+    right: auto;
+    width: 3px;
+    height: 100%;
+  }
+
+  .journey-step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border: none;
+  }
+
+  .journey-step:not(:last-child) {
+    padding-bottom: 0;
+  }
+
+  .journey-node {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .journey-node-inner {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .journey-node-dot {
+    order: -1;
+  }
+
+  .journey-card {
+    max-width: none;
+    flex: 1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .journey-line {
+    left: 1rem;
+  }
+
+  .journey-step {
+    gap: 1rem;
+    padding: 1.25rem 0;
+  }
+
+  .journey-year {
+    font-size: 1rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .journey-node-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
