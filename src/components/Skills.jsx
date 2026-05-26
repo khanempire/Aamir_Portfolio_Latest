@@ -2,6 +2,10 @@ import { skillsByCategory } from "../data/portfolio";
 import "./Skills.css";
 
 const categoryConfig = {
+  "Artificial Intelligence": {
+    label: "Artificial Intelligence",
+    description: "Building intelligent systems",
+  },
   frontend: {
     label: "Frontend",
     description: "Building interfaces",
@@ -27,6 +31,22 @@ function getCategoryConfig(key) {
 
 function CategoryIcon({ type }) {
   const icons = {
+    "Artificial Intelligence": (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 4C7.3 4 6 5.3 6 7c0 .5.1 1 .3 1.4A3.5 3.5 0 0 0 5 11c0 1.3.7 2.4 1.8 3A3 3 0 0 0 9 19h1" />
+      <path d="M15 4c1.7 0 3 1.3 3 3 0 .5-.1 1-.3 1.4A3.5 3.5 0 0 1 19 11c0 1.3-.7 2.4-1.8 3A3 3 0 0 1 15 19h-1" />
+      <path d="M12 4v15" />
+      <circle cx="9" cy="7" r="1" />
+      <circle cx="15" cy="7" r="1" />
+      <circle cx="8" cy="12" r="1" />
+      <circle cx="16" cy="12" r="1" />
+      <circle cx="12" cy="19" r="1" />
+      <line x1="10" y1="7" x2="11" y2="7" />
+      <line x1="13" y1="7" x2="14" y2="7" />
+      <line x1="9" y1="12" x2="11" y2="12" />
+      <line x1="13" y1="12" x2="15" y2="12" />
+    </svg>
+    ),
     frontend: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />

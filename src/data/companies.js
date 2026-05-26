@@ -16,7 +16,7 @@ export const companies = [
     period: "2026 – Present",
     location: "Bengaluru, India",
     description:
-      "IQVIA is a global leader in healthcare intelligence and clinical research that combines advanced analytics, technology solutions, and deep domain expertise to help life sciences organizations drive innovation, improve patient outcomes, and accelerate the development and commercialization of medical treatments.",
+      "Built a collaborative clinical trial platform for Raters and Clinical Specialists with role-based workflows, scheduling, availability management, structured feedback, and integrated real-time video/audio communication. Improved coordination and efficiency in clinical trial discussions and evaluations.",
     bannerImage:
       "/images/IQVIA.jpg",
   },

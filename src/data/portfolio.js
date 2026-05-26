@@ -17,6 +17,7 @@ export const profile = {
 };
 
 export const skillsByCategory = {
+  "Artificial Intelligence": ["LangChain", "LangGraph", "Agentic AI", "OpenAI", "Machine Learning", "Deep Learning"],
   frontend: ["React", "React Native", "JavaScript", "TypeScript", "HTML & CSS", "Tailwind CSS"],
   backend: ["Node.js", "Express", "Fastify", "Python", "AWS", "Kafka", "MongoDB", "MySQL"],
   devops: ["Git", "Docker", "CI/CD", "Terraform", "Terragrunt", "Helm", "Kubernetes"],
@@ -27,5 +28,5 @@ export const contact = {
   linkedin: "https://www.linkedin.com/in/md-aamir-khan/",
   github: "https://github.com/khanempire",
   twitter: "https://twitter.com/yourhandle",
-  resume: "/MD_AAMIR_KHAN_5.4_LATEST.pdf",
+  resume: "/MD_AAMIR_KHAN_Latest.pdf",
 };
